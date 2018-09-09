@@ -1,0 +1,47 @@
+DEPENDENCIES
+  apache2
+  app
+    path: cookbooks/app
+  apt
+  build-essential
+  dotdeb
+    git: git://github.com/tomcoonen/chef-dotdeb.git
+    revision: 278d2aade045b452f39684cd414db8cef7873c43
+  memcached
+  mysql
+  openssl
+  php
+  postfix
+
+GRAPH
+  apache2 (5.2.1)
+  app (1.0.0)
+    apache2 (>= 0.0.0)
+    apt (>= 0.0.0)
+    dotdeb (>= 0.0.0)
+    mysql (~> 8.5.1)
+    openssl (>= 0.0.0)
+    php (>= 0.0.0)
+  apt (7.1.0)
+  build-essential (8.2.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  dotdeb (0.0.3)
+  memcached (5.1.1)
+    runit (>= 1.2.0)
+  mingw (2.1.0)
+    seven_zip (>= 0.0.0)
+  mysql (8.5.1)
+  openssl (8.5.5)
+  packagecloud (1.0.0)
+  php (6.1.1)
+    build-essential (>= 5.0)
+    yum-epel (>= 0.0.0)
+  postfix (5.3.1)
+  runit (4.3.0)
+    packagecloud (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  seven_zip (3.0.0)
+    windows (>= 0.0.0)
+  windows (5.1.1)
+  yum-epel (3.2.0)
