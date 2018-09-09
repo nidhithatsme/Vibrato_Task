@@ -40,7 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
  # Enable and configure chef solo
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "app::packages"
-    chef.add_recipe "app::web_server"
+    chef.add_recipe "php"
     chef.add_recipe "app::vhost"
     chef.add_recipe "memcached"
     chef.add_recipe "app::db"
@@ -63,7 +63,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :packages   => %w{ vim git screen curl },
 		
 		# PHP packages
-        :php_packages   => %w{ php5-mysqlnd php5-curl php5-mcrypt php5-memcached php5-gd }
+        #:php_packages   => %w{ php5-mysqlnd php5-curl php5-mcrypt php5-memcached php5-gd }
 		
       },
       :mysql => {
