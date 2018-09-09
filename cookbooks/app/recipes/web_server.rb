@@ -15,7 +15,7 @@ include_recipe "dotdeb"
 include_recipe "dotdeb::php54"
 include_recipe "php"
 
-# Install PHP5 packages
+# Install PHP packages
 node['app']['php_packages'].each do |a_package|
   package a_package
 end

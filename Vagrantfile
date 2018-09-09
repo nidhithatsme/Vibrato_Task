@@ -60,7 +60,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :docroot        => "/var/www/" + project_name + "/public",
 
         # General packages
-        :packages   => %w{ vim git screen curl }
+        :packages   => %w{ vim git screen curl },
+		
+		# PHP packages
+        :php_packages   => %w{ php-mysqlnd php-curl php-mcrypt php-memcached php-gd }
         
       },
       :mysql => {
